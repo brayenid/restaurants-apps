@@ -1,4 +1,4 @@
-import detailElement from './templates/DetailElement'
+import detailElement from './templates/DetailTemplate'
 import Base from '../global/base-data'
 const Content = ({ element, data }) => {
   const detailEl = element

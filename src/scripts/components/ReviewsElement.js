@@ -1,4 +1,4 @@
-import addReviewElement from './templates/AddReview'
+import addReviewElement from './templates/AddReviewTemplate'
 import Restaurants from '../global/api'
 class Reviews {
   constructor({ reviewsContainer, reviewsListEl, dataId }) {

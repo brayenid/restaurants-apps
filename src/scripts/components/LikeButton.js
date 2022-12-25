@@ -1,5 +1,5 @@
 import FavoriteResto from '../global/favorite-resto'
-import { likeButtonEl, likedButtonEl } from './templates/LikeButton'
+import { likeButtonEl, likedButtonEl } from './templates/LikeButtonTemplate'
 
 const LikeButton = {
   async init({ likeButtonContainer, resto }) {

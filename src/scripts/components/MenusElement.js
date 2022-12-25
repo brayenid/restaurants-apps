@@ -1,4 +1,4 @@
-import menusEl from './templates/MenusElement'
+import menusEl from './templates/MenusTemplate'
 
 class Menus {
   constructor({ foods, drinks, data }) {
