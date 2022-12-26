@@ -1,7 +1,7 @@
 import Restaurants from '../global/api'
 import urlParser from '../routes/url-parser'
 import Content from '../components/ContentElement'
-import LikeButton from '../components/LikeButton'
+import LikeButton from '../components/LikeButtonElement'
 import Reviews from '../components/ReviewsElement'
 import Menus from '../components/MenusElement'
 const Detail = {
@@ -16,7 +16,7 @@ const Detail = {
         <div id="reviews"></div>
       </div>
     </div>
-        `
+    `
   },
   async onAfterMounted() {
     const url = urlParser.withoutCombiner()

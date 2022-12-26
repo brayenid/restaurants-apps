@@ -15,7 +15,7 @@ const Restaurants = {
       }
       throw new Error('Fetch all error.')
     } catch (error) {
-      alert(error)
+      return error
     }
   },
 
@@ -29,7 +29,7 @@ const Restaurants = {
       }
       throw new Error('Fetch restaurant By ID Error.')
     } catch (error) {
-      alert(error)
+      return error
     }
   },
 

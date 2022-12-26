@@ -1,5 +1,6 @@
 import addReviewElement from './templates/AddReviewTemplate'
 import Restaurants from '../global/api'
+import review from './templates/ReviewTemplate'
 class Reviews {
   constructor({ reviewsContainer, reviewsListEl, dataId }) {
     this._reviewsContainer = reviewsContainer
@@ -18,14 +19,7 @@ class Reviews {
       reviewEl.innerHTML = ''
       reviewEl.innerHTML += data.length < 1 ? `<h2>Belum ada ulasan</h2>` : `<h2>${data.length} Ulasan :</h2>`
       data.reverse().forEach((item) => {
-        const review = `
-          <div class="review">
-            <h3>${item.name}</h3>
-            <p class="reviewDate">${item.date}</p>
-            <p class="reviewContent">${item.review}</p>
-          </div>
-          `
-        reviewEl.innerHTML += review
+        reviewEl.innerHTML += review(item)
       })
     })
   }

@@ -1,5 +1,7 @@
+import '../NoNetwork'
 const detailElement = ({ Base, restaurant }) => {
-  return `
+  if (restaurant) {
+    return `
     <div class="detailImg">
       <img src="${Base.API_URL}${Base.IMG_PATH}${restaurant.pictureId}" alt="${restaurant.name}">
     </div>
@@ -10,5 +12,9 @@ const detailElement = ({ Base, restaurant }) => {
       <ul class="categories"></ul>
     </div>
     `
+  }
+  return `
+  <no-network message="Anda tidak tersambung ke jaringan!"></no-network>
+  `
 }
 export default detailElement
