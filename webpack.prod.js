@@ -39,7 +39,7 @@ module.exports = merge(common, {
       ]
     }),
     new BundleAnalyzerPlugin({
-      
+      analyzerMode: 'json'
     })
   ],
   optimization: {
