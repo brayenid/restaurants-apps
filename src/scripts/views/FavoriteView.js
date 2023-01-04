@@ -1,12 +1,10 @@
 import FavoriteResto from '../global/favorite-resto'
 import Base from '../global/base-data'
 import itemList from '../components/templates/ItemListTemplate'
-import '../components/HeaderElement'
 import '../components/MainElement'
 const Favorite = {
   async onMounted() {
     return `
-        <header-element></header-element>
         <main-element main-title="Restoran Favorit :"></main-element>
         `
   },

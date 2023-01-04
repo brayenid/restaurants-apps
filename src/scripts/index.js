@@ -1,4 +1,5 @@
 import 'regenerator-runtime'
+import '../styles/reset.css'
 import '../styles/main.css'
 import './nowyear.js'
 import App from './app'
@@ -10,7 +11,7 @@ const app = new App({
   content: document.querySelector('#app')
 })
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   app.renderPage()
   swRegister()
 })

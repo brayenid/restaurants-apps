@@ -9,7 +9,7 @@ const Detail = {
     return `
     <div class="container">
       <main class="detailContainer">
-        <div class="detail"></div>
+        <div class="detail" id="main" tabindex="0"></div>
         <div class="menus"></div>
       </main>
       <div class="reviewStuff">

@@ -22,6 +22,11 @@ class App {
     const page = routes[url]
     this._content.innerHTML = await page.onMounted()
     await page.onAfterMounted()
+    const skipLinkElem = document.querySelector('.skipToContent')
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault()
+      document.querySelector('#main').focus()
+    })
   }
 }
 export default App

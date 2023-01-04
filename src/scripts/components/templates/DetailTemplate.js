@@ -1,9 +1,9 @@
-import '../NoNetwork'
+import '../NoNetworkElement'
 const detailElement = ({ Base, restaurant }) => {
   if (restaurant) {
     return `
     <div class="detailImg">
-      <img src="${Base.API_URL}${Base.IMG_PATH}${restaurant.pictureId}" alt="${restaurant.name}">
+      <img src="${Base.API_URL}${Base.IMG_PATH_MEDIUM}${restaurant.pictureId}" alt="${restaurant.name}">
     </div>
     <div class="detailContent">
       <h3>${restaurant.name}</h3>

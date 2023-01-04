@@ -1,3 +1,4 @@
+import makeItemListSkeleton from './helpers/skeleton-maker'
 class MainElement extends HTMLElement {
   connectedCallback() {
     this._mainTitle = this.getAttribute('main-title') || null
@@ -6,9 +7,11 @@ class MainElement extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <main id="main">
+        <main id="main" tabindex="0">
             <h2 class="title">${this._mainTitle}</h2>
-            <div class="restoList"></div>
+            <div class="restoList">
+            ${makeItemListSkeleton(20)}
+            </div>
         </main>
         `
   }
