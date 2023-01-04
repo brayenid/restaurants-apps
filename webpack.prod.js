@@ -4,7 +4,7 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 const path = require('path')
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default
 const ImageminMozjpeg = require('imagemin-mozjpeg')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = merge(common, {
   mode: 'production',
@@ -38,7 +38,9 @@ module.exports = merge(common, {
         })
       ]
     }),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin({
+      
+    })
   ],
   optimization: {
     splitChunks: {
