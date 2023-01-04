@@ -5,7 +5,7 @@ const itemList = ({ data, imagePath, description }) => {
   return `
   <div class="restoImgCity">
       <span class="restoCity">Kota ${data.city}</span>
-      <a href='#/detail/${data.id}'><img loading="lazy" src="${imagePath}" alt="${data.name}" width="100%"></a>
+      <a href='#/detail/${data.id}'><img loading="lazy" src="${imagePath}" alt="${data.name}"></a>
   </div>
   <div class="restoContent">
       <p class="restoRating">⭐️ ${data.rating}</p>

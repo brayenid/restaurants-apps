@@ -13,6 +13,7 @@ body {
   font-family: 'Rubik', sans-serif;
   background-color: #fff;
   min-height: 100vh;
+  display: block !important;
 }
 .container {
   padding: 1rem;
@@ -78,7 +79,7 @@ nav .hamburgerButton {
   max-height: 500px;
 }
 header {
-  background-image: url('../public/images/heros/hero-image_2.jpg');
+  background-image: url('../public/images/heros/hero-image_2-small.webp');
   height: 50vh;
   min-height: 350px;
   background-repeat: no-repeat;
@@ -137,6 +138,11 @@ header h1 {
 }
 .restoImgCity {
   position: relative;
+  min-height: 200px;
+}
+.restoImgCity img {
+  width: 100%;
+  height: 100%;
 }
 .restoCity {
   position: absolute;
@@ -366,6 +372,9 @@ footer {
 }
 /* Desktop */
 @media screen and (min-width: 768px) {
+  header {
+    background-image: url('../public/images/heros/hero-image_2-large.webp');
+  }
   /* Nav Menu */
   .menuList {
     max-height: 200px;

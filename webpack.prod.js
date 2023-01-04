@@ -2,8 +2,6 @@ const common = require('./webpack.common')
 const { merge } = require('webpack-merge')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 const path = require('path')
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default
-const ImageminMozjpeg = require('imagemin-mozjpeg')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = merge(common, {
@@ -29,14 +27,6 @@ module.exports = merge(common, {
     new WorkboxWebpackPlugin.InjectManifest({
       swSrc: path.resolve(__dirname, './src/scripts/sw.js'),
       swDest: './sw.bundle.js'
-    }),
-    new ImageminWebpackPlugin({
-      plugins: [
-        ImageminMozjpeg({
-          quality: 50,
-          progressive: true
-        })
-      ]
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'json'
