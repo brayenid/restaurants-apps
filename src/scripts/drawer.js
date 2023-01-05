@@ -1,11 +1,13 @@
 const Drawer = {
-  init({ button, drawer, content }) {
+  init({ button, drawer }) {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer)
     })
 
-    content.addEventListener('click', (event) => {
-      this._closeDrawer(event, drawer)
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.menuList')) {
+        this._closeDrawer(event, drawer)
+      }
     })
   },
 

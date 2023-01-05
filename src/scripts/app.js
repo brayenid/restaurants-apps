@@ -12,8 +12,7 @@ class App {
   _initialAppShell() {
     Drawer.init({
       button: this._button,
-      drawer: this._drawer,
-      content: this._content
+      drawer: this._drawer
     })
   }
 
